@@ -2,14 +2,14 @@ function getMinMax(inputData ) {
   // ваш код...
   let myArr = inputData.split(' ');
 
-  let minValue = myArr[0];
+  let onlyNums = myArr.filter(Number);
 
-  let maxValue = minValue;
+  let minValue = onlyNums[0];
+  let maxValue = minValue
 
-  for (let i = 0; i < myArr.length; i++) {
-    let el = +myArr[i];
-    if (el < minValue) minValue = el;
-    else if (el > maxValue) maxValue = el;
+  for (let i = 0; i < onlyNums.length; i++) {
+    minValue = Math.min(minValue, onlyNums[i]);
+    maxValue = Math.max(maxValue, onlyNums[i]);
   }
 
   return {min: minValue, max: maxValue};

@@ -5,6 +5,6 @@ function hideSelf() {
   myButton.addEventListener('click', hideSelf);
 
   function hideSelf() {
-      return myButton.setAttribute("hidden", true);
+      return myButton.hidden = true;
   }
 }

@@ -6,6 +6,6 @@ function toggleText() {
   myButton.addEventListener('click', toggleText);
 
   function toggleText() {
-    textBlock.toggleAttribute('hidden');
+    textBlock.hidden = !textBlock.hidden;
   }
 }

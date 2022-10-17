@@ -3,9 +3,5 @@ function toggleText() {
   let myButton = document.querySelector('.toggle-text-button');
   let textBlock = document.querySelector('#text');
 
-  myButton.addEventListener('click', toggleText);
-
-  function toggleText() {
-    textBlock.hidden = !textBlock.hidden;
-  }
+  myButton.addEventListener('click', () => textBlock.hidden = !textBlock.hidden);
 }

@@ -18,8 +18,8 @@ export default class UserTable {
     }
 
     render(rows) {
-        const table = document.querySelector('table');
-
+        // const table = document.querySelector('table');
+        const table = document.createElement('table');
         const list = rows.reduce(function (resultList, currentRow) {
             return resultList + `
         <tr>
@@ -47,7 +47,7 @@ export default class UserTable {
           </table>
         `;
 
-        let btn = document.querySelectorAll('button');
+        let btn = table.querySelectorAll('button');
 
         for (let k of btn) {
             k.addEventListener('click', this.deleteTR);
